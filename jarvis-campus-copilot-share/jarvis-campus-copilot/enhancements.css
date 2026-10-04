@@ -1,0 +1,21 @@
+/* Keep the original JARVIS layout and add subtle depth and motion. */
+body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.2;background:radial-gradient(1px 1px at 14% 24%,#b7ffffa8 99%,transparent),radial-gradient(1px 1px at 82% 17%,#7adcfb99 99%,transparent),radial-gradient(1px 1px at 73% 74%,#a5a0ff88 99%,transparent),radial-gradient(1px 1px at 29% 82%,#8df5df88 99%,transparent),radial-gradient(1px 1px at 54% 39%,#ffffff66 99%,transparent);background-size:410px 370px,530px 470px,610px 570px,490px 520px,710px 660px;animation:jarvis-star-drift 45s linear infinite}
+.app{position:relative;z-index:1}.card:not(.hero),.campus-record{position:relative;transform-style:preserve-3d;transition:transform .32s cubic-bezier(.2,.75,.2,1),border-color .32s,box-shadow .32s;will-change:transform}
+.card:not(.hero):hover,.campus-record:hover{transform:perspective(900px) rotateX(var(--card-tilt-y,0deg)) rotateY(var(--card-tilt-x,0deg)) translateY(-3px);border-color:#4a8290;box-shadow:0 19px 48px #0007,0 0 22px #42d6e512,inset 0 1px #caffff12}
+.card:not(.hero):before,.campus-record:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:linear-gradient(115deg,transparent 20%,#9cfaff0c 48%,transparent 72%);transform:translateX(-70%);transition:opacity .25s}
+.card:not(.hero):hover:before,.campus-record:hover:before{opacity:1;animation:jarvis-card-glint .8s ease both}
+.card:not(.hero)>*,.campus-record>*{position:relative}
+.primary,.secondary,.campus-tools button,.campus-tools label,.campus-nav button,.login-tab{transition:transform .2s,border-color .2s,box-shadow .2s,filter .2s}
+.primary:hover,.secondary:hover,.campus-tools button:hover,.campus-tools label:hover,.campus-nav button:hover,.login-tab:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.primary:active,.secondary:active,.campus-tools button:active,.campus-tools label:active{transform:translateY(0) scale(.985)}
+.risk i{animation:jarvis-risk-pulse 2.6s ease-in-out infinite}.risk:nth-child(3) i{animation-delay:.6s}.risk:nth-child(4) i{animation-delay:1.2s}
+.campus-record{animation:jarvis-record-in .5s cubic-bezier(.2,.8,.2,1) both}.campus-record:nth-child(3n+2){animation-delay:45ms}.campus-record:nth-child(3n){animation-delay:90ms}
+.login-ring,.ring{filter:drop-shadow(0 0 6px #50d9ed2e)}.orb{transition:filter .35s,box-shadow .35s}.hero:hover .orb{filter:brightness(1.12) saturate(1.14);box-shadow:inset -18px -20px 26px #02060b,inset 7px 8px 22px #d8ffffaa,0 0 36px #57e5f0c0,0 0 94px #25b9df68}
+.ai-bubble.jarvis{animation:jarvis-chat-in .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes jarvis-star-drift{to{background-position:410px 190px,-530px 470px,305px -570px,-490px 260px,710px -330px}}
+@keyframes jarvis-card-glint{to{transform:translateX(70%)}}
+@keyframes jarvis-risk-pulse{0%,100%{box-shadow:0 0 0 0 #ff647733}50%{box-shadow:0 0 0 5px #ff647700}}
+@keyframes jarvis-record-in{from{opacity:0;transform:translateY(9px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes jarvis-chat-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.card:not(.hero):hover,.campus-record:hover{transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){body:after{animation:none}.card:not(.hero),.campus-record,.primary,.secondary,.campus-tools button,.campus-tools label,.campus-nav button,.login-tab{transition:none}.card:not(.hero):hover,.campus-record:hover,.primary:hover,.secondary:hover,.campus-tools button:hover,.campus-tools label:hover,.campus-nav button:hover,.login-tab:hover{transform:none}.risk i,.campus-record,.ai-bubble.jarvis{animation:none}}

@@ -1,0 +1,165 @@
+/* Color-only theme inspired by Supabase's charcoal surfaces and green accent. */
+:root {
+  color-scheme: dark;
+  --bg: #0e100f;
+  --panel: #151816;
+  --line: #2b332e;
+  --muted: #99a29c;
+  --cyan: #3ecf8e;
+  --mint: #75e6ad;
+}
+
+body {
+  color: #e7ebe8 !important;
+  background: radial-gradient(ellipse at 57% 5%, #17251d 0, #111513 38%, #0e100f 78%) !important;
+}
+body:before {
+  background-image: linear-gradient(#3ecf8e0c 1px, transparent 1px), linear-gradient(90deg, #3ecf8e0c 1px, transparent 1px) !important;
+}
+
+.card, .role-panel, .role-stat, .role-welcome, .ai-studio, .login-shell, .modalbox {
+  color: #e7ebe8 !important;
+  border-color: #2b332e !important;
+  background: linear-gradient(145deg, #171b18f5, #101311f5) !important;
+}
+.role-welcome, .ai-studio, .login-shell {
+  box-shadow: 0 22px 70px #0008, inset 0 1px #ffffff0a !important;
+}
+.hero {
+  border-color: #304439 !important;
+  background: radial-gradient(ellipse at 50% 54%, #1b3629, #121914 55%, #0e100f) !important;
+  box-shadow: inset 0 0 90px #18332488, 0 18px 50px #0007 !important;
+}
+.hero:before { background: radial-gradient(circle, #255b3e55, transparent 68%) !important; }
+.hero:after {
+  background: linear-gradient(90deg, transparent, #67e6a877, transparent) !important;
+  box-shadow: 0 0 22px 4px #3ecf8e44 !important;
+}
+.ring { border-color: #3ecf8e55 !important; }
+.r2 { border-color: #3ecf8e35 !important; }
+.r3 { border-color: #75e6ad38 !important; }
+.orb {
+  background: radial-gradient(circle at 32% 25%, #effff7 0, #b7f9d5 4%, #68e5a7 12%, #229963 27%, #11432d 52%, #07160e 72%, #3ecf8e 78%, #091710 86%) !important;
+  box-shadow: inset -18px -20px 26px #020805, inset 7px 8px 22px #e1ffefaa, 0 0 25px #3ecf8eaa, 0 0 75px #29ad6c66 !important;
+}
+.orb:before {
+  background: radial-gradient(ellipse at 30% 28%, #fff9, transparent 20%), conic-gradient(transparent, #b6ffd699, transparent 24%, #42ca83aa, transparent 55%, #8fffc09c, transparent) !important;
+}
+.core {
+  background: #eafff1 !important;
+  box-shadow: 0 0 35px 18px #75e6ad88 !important;
+}
+.orbcaption, .eyebrow, .label, .head small { color: #8fa59a !important; }
+.brand i, .campus-launch, .profile-switch {
+  color: #3ecf8e !important;
+  border-color: #315841 !important;
+  background-color: #111914 !important;
+}
+.brand i { box-shadow: 0 0 24px #3ecf8e2e !important; }
+.campus-launch:hover, .profile-switch:hover { box-shadow: 0 0 18px #3ecf8e44 !important; }
+.green, .ai-status.live, #aiState.live, .role-stat b { color: #3ecf8e !important; }
+
+.primary {
+  color: #07140d !important;
+  border-color: transparent !important;
+  background: linear-gradient(100deg, #75e6ad, #3ecf8e) !important;
+  box-shadow: 0 5px 24px #3ecf8e2e !important;
+}
+.secondary, .ai-chip, .ai-select, .role-notify, .login-tab {
+  color: #d6ded8 !important;
+  border-color: #34423a !important;
+  background: #171c19 !important;
+}
+.secondary:hover, .ai-chip:hover, .login-tab.active {
+  color: #9af0bd !important;
+  border-color: #3ecf8e !important;
+  background: #1b2a20 !important;
+}
+.linkbtn { color: #c1ccc4 !important; }
+.linkbtn:hover { color: #75e6ad !important; background: #1a241d !important; }
+.msg, .muted, .hero p, .state, .role-panel-copy, .role-study-caption,
+.role-study-widget > p, .ai-privacy, .login-copy, .login-private {
+  color: #9aa59e !important;
+}
+.pick, .role-study-widget {
+  border-color: #345441 !important;
+  background: linear-gradient(140deg, #17271e, #111713) !important;
+}
+.pick p strong, .role-study-widget > p strong { color: #e9f4ec !important; }
+.role-study-controls input, .role-study-controls select,
+.role-event-form input, .role-event-form select,
+.ai-compose textarea, .modalbox textarea, .login-form input,
+.modalbox, .ai-log {
+  color: #e1e9e3 !important;
+  border-color: #344139 !important;
+  background-color: #101411 !important;
+}
+.role-study-controls input:focus, .role-study-controls select:focus,
+.role-event-form input:focus, .role-event-form select:focus,
+.ai-compose textarea:focus, .login-form input:focus {
+  border-color: #3ecf8e !important;
+  outline-color: #3ecf8e !important;
+  box-shadow: 0 0 0 3px #3ecf8e20 !important;
+}
+.role-upload-actions button, .role-event, .task, .ai-bubble.jarvis,
+.study-generated-card, .ai-log .ai-bubble.jarvis {
+  color: #dce5de !important;
+  border-color: #2d3b32 !important;
+  background: linear-gradient(110deg, #171d19, #111512) !important;
+}
+.role-upload-actions button > i {
+  color: #75e6ad !important;
+  border-color: #315841 !important;
+  background: #15231a !important;
+}
+.role-event-time, .role-tag, .study-result-head b,
+.study-result-actions span, .study-generated-card small,
+.study-hint { color: #75e6ad !important; }
+.role-tag, .lms-kind.kind-lecture { background-color: #172b20 !important; }
+.ai-bubble.you { color: #e7f5eb !important; background: #1a3827 !important; }
+.toast { color: #e7f5eb !important; border-color: #315841 !important; background: #17271e !important; }
+.timer { background: conic-gradient(#3ecf8e var(--prog, 0%), #25312a 0) !important; }
+.timer:before { background: #141915 !important; }
+.role-study-generated-card, .study-generated-card { border-color: #355844 !important; }
+.ai-setup { border-color: #554b32 !important; background: #19170f !important; }
+.ai-setup a { color: #75e6ad !important; }
+.ai-loading .orb, .ai-listening .orb {
+  box-shadow: 0 0 38px #75e6adbb, 0 0 100px #3ecf8e66 !important;
+}
+.voice-input.is-listening { color: #75e6ad !important; border-color: #75e6ad !important; box-shadow: 0 0 18px #3ecf8e55 !important; }
+.login-kicker, .welcome-caption { color: #75e6ad !important; }
+.login-orbit .login-ring { border-color: #3ecf8e55 !important; }
+.login-orbit .login-sphere {
+  background: radial-gradient(circle at 30% 24%, #fff 0, #d7ffe8 4%, #72e6aa 10%, #218f5a 28%, #123c2a 63%, #06140d 80%, #59d890 86%, #101912 94%) !important;
+  box-shadow: inset -13px -16px 22px #020805, inset 5px 6px 16px #e2fff0b3, 0 0 32px #3ecf8eaa, 0 0 100px #24bb6d50 !important;
+}
+.welcome-name { text-shadow: 0 2px #94f1bb, 0 5px #26784b, 0 12px 0 #102219, 0 22px 35px #3ecf8e66 !important; }
+.jarvis-particle { background: #b7ffd5 !important; box-shadow: 0 0 10px 2px #3ecf8e88 !important; }
+.risk i { box-shadow: 0 0 8px currentColor !important; }
+.lms-overlay, .modal { background-color: #050705dd !important; }
+.lms-shell, .campus-app { color: #e7ebe8 !important; border-color: #2b332e !important; background: #121613 !important; }
+.lms-header, .lms-nav, .lms-editor-bar, .campus-top, .campus-side { color: #dce5de !important; border-color: #2b332e !important; background: #171b18 !important; }
+.lms-card, .lms-record, .lms-assessment, .lms-example, .lms-sandbox,
+.campus-record, .campus-stat, .campus-tool, .campus-empty {
+  color: #dce5de !important;
+  border-color: #2d3931 !important;
+  background: #171c18 !important;
+}
+.lms-field, .lms-type-select, .lms-editor, .lms-json, .lms-code-instructions,
+.lms-publish-form input, .lms-publish-form textarea, .lms-publish-form select,
+.campus-form input, .campus-form textarea, .campus-form select {
+  color: #e1e9e3 !important;
+  border-color: #344139 !important;
+  background: #101411 !important;
+}
+.lms-kind, .campus-logo, .campus-sub, .campus-nav .active, .campus-title,
+.lms-count, .lms-course { color: #75e6ad !important; }
+.lms-kind, .campus-logo, .campus-nav .active { background-color: #172b20 !important; }
+.lms-publish, .lms-open, .lms-download, .campus-primary {
+  color: #07140d !important;
+  border-color: transparent !important;
+  background: linear-gradient(100deg, #75e6ad, #3ecf8e) !important;
+}
+.campus-launch, .role-study-widget .study-generated-card:hover,
+.lms-choice:hover, .campus-record:hover { border-color: #3ecf8e !important; }
+::selection { color: #07140d; background: #75e6ad; }

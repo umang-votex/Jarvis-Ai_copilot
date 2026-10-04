@@ -1,0 +1,41 @@
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  inset: -3vw;
+  pointer-events: none;
+  background-image: url("/assets/particle-globe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .68;
+  mix-blend-mode: screen;
+  filter: saturate(1.35) brightness(1.28) contrast(1.08);
+  transform: translate3d(0, 0, 0) scale(1.02);
+  animation: particle-globe-drift 28s ease-in-out infinite alternate;
+  will-change: transform, background-position;
+}
+
+.app, #roleDashboard { position: relative; z-index: 1; }
+
+/* Keep one continuous wallpaper behind the interface, visible through its glassy frames. */
+:is(.role-welcome, .role-stat, .role-panel, .role-study-widget, .role-event,
+    .role-empty, .role-reminder, .role-upload-actions, .card, .ai-studio,
+    .login-shell, .study-generated-card, .flash-card, .campus-stat,
+    .campus-record, .lms-card, .lms-assessment) {
+  background: linear-gradient(145deg, rgba(17, 25, 20, .66), rgba(11, 17, 13, .72)) !important;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes particle-globe-drift {
+  0% { background-position: 48% 36%; transform: translate3d(-.8%, .5%, 0) scale(1.02); }
+  100% { background-position: 53% 43%; transform: translate3d(.8%, -.5%, 0) scale(1.08); }
+}
+
+@media (max-width: 700px) {
+  body::after { opacity: .58; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; }
+}

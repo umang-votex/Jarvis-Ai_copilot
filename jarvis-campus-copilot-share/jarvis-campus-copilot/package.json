@@ -1,0 +1,12 @@
+{
+  "name": "jarvis-student-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: jarvis-student-copilot
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DAILY_AI_LIMIT
+        value: "120"
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: OPENAI_API_KEY
+        sync: false
+
